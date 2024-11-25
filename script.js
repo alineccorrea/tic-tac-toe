@@ -4,10 +4,11 @@ const celulas = document.querySelectorAll('.celula');
 
 document.getElementById("botaoReiniciar").addEventListener("click", iniciarJogo);
 
-let vezDoX = true;
+let vezDoX;
 
 function iniciarJogo()
 {
+    vezDoX = true;
     celulas.forEach(celula =>{
         celula.textContent = "";
         celula.addEventListener('click', tratarClique, {once:true} );
